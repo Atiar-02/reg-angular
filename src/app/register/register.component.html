@@ -1,0 +1,68 @@
+<!-- Log-in-form-start -->
+<img class="wave" src="../assets/wave.png" alt="wave" />
+<div class="container">
+  <div class="img">
+    <img src="../assets/bg.svg" alt="bg-image" />
+  </div>
+  <div class="login-content">
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+      <img src="../assets/avatar.svg" alt="avater" />
+      <h2 class="title">Register</h2>
+
+      <div class="input-div one">
+        <div class="i">
+          <i class="bi bi-person"></i>
+        </div>
+        <div class="div">
+          <input
+            type="number"
+            placeholder="Id-Number"
+            class="input"
+            pattern="[0-9]"
+            formControlName="id"
+          />
+        </div>
+      </div>
+
+      <div class="input-div one">
+        <div class="i">
+          <i class="bi bi-telephone"></i>
+        </div>
+        <div class="div">
+          <input
+            type="number"
+            placeholder="Phone number"
+            class="input"
+            pattern="[0-9]"
+            formControlName="phone"
+          />
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="bi bi-key"></i>
+        </div>
+        <div class="div">
+          <input
+            type="password"
+            placeholder="Password"
+            class="input"
+            formControlName="pass"
+          />
+        </div>
+      </div>
+
+      <input type="submit" class="btn" value="Register" />
+
+      <div class="register">
+        have an Account please<a
+          routerLink="/login"
+          routerLinkActive="active"
+          class="linkreg"
+          >Login</a
+        >
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Login form end -->

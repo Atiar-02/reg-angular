@@ -1,0 +1,52 @@
+<!-- Log-in-form-start -->
+<img class="wave" src="../assets/wave.png" alt="wave" />
+<div class="container">
+  <div class="img">
+    <img src="../assets/bg.svg" alt="bg-image" />
+  </div>
+  <div class="login-content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <img src="../assets/avatar.svg" alt="avater" />
+      <h2 class="title">Welcome</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="bi bi-telephone"></i>
+        </div>
+        <div class="div">
+          <input
+            type="number"
+            placeholder="Phone number"
+            class="input"
+            pattern="[0-9]"
+            formControlName="phone"
+          />
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="bi bi-key"></i>
+        </div>
+        <div class="div">
+          <input
+            type="password"
+            placeholder="Password"
+            class="input"
+            formControlName="pass"
+          />
+        </div>
+      </div>
+      <a routerLink="/pass" routerLinkActive="active">Forgot Password?</a>
+      <input type="submit" class="btn" value="Login" />
+
+      <div class="register">
+        Don't have an Account please<a
+          routerLink="/reg"
+          routerLinkActive="active"
+          class="linkreg"
+          >Register</a
+        >
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Login form end -->
